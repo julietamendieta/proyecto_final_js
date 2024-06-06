@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Mis gastos</title>
+</head>
+<body>
+    <h1>Calculadora de gastos</h1>
+    <!--Sección para ingreso de datos-->
+    <div class="contenedor-principal">
+        <section id="contenedor-opciones">
+            <div class="contenedor-tipo-gasto">
+                <h2>Tipo de gasto</h2>
+                <select>
+                    <option class="tipo-gasto">Diarios</option>
+                    <option class="tipo-gasto">Semanales</option>
+                    <option class="tipo-gasto">Mensuales</option>
+                </select>
+                <button id="aceptar">Aceptar</button>
+            </div>
+            <div class="contenedor-categoria-gasto">
+                <h2>Categoría</h2>
+                <p>Ingresá el nombre del gasto</p>
+                <input id="ingreso-categoria-gasto" type="text">
+            </div>
+            <div class="contenedor-monto-gasto">
+                <h2>Gasto</h2>
+                <p>Ingresá el monto del gasto</p>
+                <input id="ingreso-monto-gasto" type="number">
+                <button id="agregar">Agregar gasto</button>
+            </div>
+        </section>
+        <!--Sección de lista y acciones de lista-->
+        <section id="contenedor-lista">
+            <div class="contenedor-lista">
+                <h2 id="titulo-tipo-gastos">Tus gastos</h2>
+            </div>
+            <div id="lista-gastos" class="lista-gastos">
+                <p id="lista-vacia" class="disabled">Aún no tienes gastos en tu lista.</p>
+                <div id="gasto" class="disabled">
+                    <!--Esto se completa en JS-->
+                </div>
+            </div>
+            <div class="contenedor-acciones-lista">
+                <div class="suma-total">
+                    <p>Total:</p>
+                    <p id="total">$30000</p>
+                </div>
+                <div class="acciones-lista">
+                    <button id="borrar-lista">Borrar lista</button>
+                    <button id="descargar-lista">Descargar lista</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

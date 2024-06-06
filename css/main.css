@@ -1,0 +1,130 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-image: url(../img/numbers.png);
+    background-size: cover;
+}
+
+h1 {
+    font-size: 80px;
+    color: rgb(109, 45, 104);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contenedor-principal{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#contenedor-opciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(216, 181, 186);
+    padding: 50px;
+    border-radius: 10px;
+    color: rgb(109, 45, 104);
+}
+
+#seleccion{
+    color: rgb(109, 45, 104);
+    border: none;
+    border-radius: 4px;
+}
+
+.tipo-gasto{
+    color: rgb(109, 45, 104);
+}
+
+#contenedor-lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: lightblue;
+    padding: 50px;
+    border-radius: 10px;
+    color: rgb(109, 45, 104);
+}
+
+#ingreso-monto-gasto, #ingreso-categoria-gasto{
+    color: rgb(109, 45, 104);
+    border-radius: 4px;
+    border: none;
+}
+
+#ingreso-monto-gasto, #categoria-gasto{
+    border: none;
+}
+
+#agregar, #aceptar{
+    color: white;
+    background-color: rgb(109, 45, 104);
+    border: 2px solid rgb(109, 45, 104);
+    border-radius: 8px;
+    padding: 0 24px;
+}
+
+#agregar:hover, #aceptar:hover{
+    background-color: rgb(216, 181, 186);
+    color: rgb(109, 45, 104);
+}
+
+#lista-gastos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gasto-lista{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.eliminar{
+    border: none;
+    background-color: transparent;
+    height: fit-content;
+}
+
+.suma-total{
+    display: flex;
+    justify-content: space-between;
+    background-color: ivory;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-weight: 500;
+}
+
+.acciones-lista{
+    background-color: ivory;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#borrar-lista, #descargar-lista{
+    background-color: lightblue;
+    color: rgb(109, 45, 104);
+    border-radius: 8px;
+    padding: 8px 12px;
+    border: 2px solid lightblue;
+}
+
+.disabled {
+    display: none;
+}
