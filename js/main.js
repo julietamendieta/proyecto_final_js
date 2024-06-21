@@ -32,11 +32,29 @@ if(tituloGastoLS){
 }
 
 botonAgregar.addEventListener("click", leerGasto);
+botonAgregar.addEventListener("click", () => {
+    Toastify({
+        text: "Gasto agregado a la lista",
+        className: "info",
+        style: {
+          background: "linear-gradient(to right, #6d2d68, #6d509b)",
+        }
+      }).showToast();
+})
+
+
 document.querySelector("#ingreso-monto-gasto").addEventListener("keydown", teclado);
 
 function teclado(e) {
     if (e.key === "Enter") {
         leerGasto();
+        Toastify({
+            text: "Gasto agregado a la lista",
+            className: "info",
+            style: {
+              background: "linear-gradient(to right, #6d2d68, #6d509b)",
+            }
+          }).showToast();
     }
 }
 
@@ -147,6 +165,9 @@ function actualizarTotal() {
 }
 
 botonDescargar.addEventListener("click", descargarLista);
+botonDescargar.addEventListener("click", () => {
+    Swal.fire("Lista descargada");
+});
 function descargarLista() {
     gastos.length = 0;
     localStorage.setItem(("gastos-en-lista"), JSON.stringify(gastos));
