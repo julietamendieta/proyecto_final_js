@@ -45,6 +45,12 @@ h1 {
     color: rgb(109, 45, 104);
 }
 
+#tipos-gastos{
+    color: rgb(109, 45, 104);
+    margin-bottom: 10px;
+}
+
+
 #contenedor-lista{
     display: flex;
     flex-direction: column;

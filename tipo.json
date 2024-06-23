@@ -1,0 +1,5 @@
+[
+    {"id": 1, "nombre": "Diarios"},
+    {"id": 2, "nombre": "Semanales"},
+    {"id": 3, "nombre": "Mensuales"}
+]

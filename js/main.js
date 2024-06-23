@@ -1,13 +1,24 @@
-const tipoDeGasto = [
-    {id:"Diarios"},
-    {id:"Semanales"},
-    {id:"Mensuales"}
-]
 //Elementos de HTML
 let botonAceptar = document.querySelector("#aceptar");
 let botonAgregar = document.querySelector("#agregar");
 let tituloGastos = document.querySelector("#titulo-tipo-gastos");
 let listaGastos = document.querySelector("#gasto");
+
+const tiposGastos = document.querySelector("#tipos-gastos");
+
+const peticion = async () => {
+    const respuesta = await fetch('tipo.json')
+    const datos = await respuesta.json();
+    const data = await datos;
+    for(item of data) {
+        const option = document.createElement("option")
+        option.innerHTML = `
+            <p>${item.nombre}</p>
+        `
+        tiposGastos.appendChild(option)
+    }
+}
+peticion();
 
 botonAceptar.addEventListener("click", leerTipoGasto);
 
@@ -16,10 +27,8 @@ let tituloGasto;
 //FUNCION PARA AGREGAR TIPO DE GASTO A PARTIR DEL SELECT
 function leerTipoGasto() {
     const tipoGastoSeleccionado = document.querySelector("select").value;
-    tituloGasto = tipoDeGasto.find(tipo => tipo.id === tipoGastoSeleccionado);
-    tituloGastos.innerText = `Tus gastos ${tituloGasto.id}`;
-    let tituloGastoSeleccionado = tituloGasto.id;
-    localStorage.setItem("tipo-seleccionado", JSON.stringify(tituloGastoSeleccionado));
+    tituloGastos.innerText = `Tus gastos ${tipoGastoSeleccionado}`;
+    localStorage.setItem("tipo-seleccionado", JSON.stringify(tipoGastoSeleccionado));
 }
 
 let tituloGastoST;
@@ -168,6 +177,7 @@ botonDescargar.addEventListener("click", descargarLista);
 botonDescargar.addEventListener("click", () => {
     Swal.fire("Lista descargada");
 });
+
 function descargarLista() {
     gastos.length = 0;
     localStorage.setItem(("gastos-en-lista"), JSON.stringify(gastos));
