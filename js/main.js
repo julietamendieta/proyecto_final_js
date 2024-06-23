@@ -183,4 +183,5 @@ function descargarLista() {
     localStorage.setItem(("gastos-en-lista"), JSON.stringify(gastos));
     listaVacia.classList.remove("disabled");
     listaGastos.classList.add("disabled");
+    actualizarTotal();
 }
